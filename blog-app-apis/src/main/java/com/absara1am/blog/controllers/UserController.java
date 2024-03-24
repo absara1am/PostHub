@@ -49,14 +49,14 @@ public class UserController {
 		return new ResponseEntity<>(new ApiResponse("User deleted Successfully", true), HttpStatus.OK);
 	}
 	
-	//GET - user get
+	//GET - get all users
 	@GetMapping("/")
 	public ResponseEntity<List<UserDto>> getAllUsers(){
 		
 		return ResponseEntity.ok(this.userService.getAllUsers());
 	}
 	
-	//GET - single user get
+	//GET - get single user
 	@GetMapping("/{userId}")
 	public ResponseEntity<UserDto> getSingleUser(@PathVariable Integer userId){
 		
